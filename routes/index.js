@@ -23,7 +23,7 @@ module.exports = {
        	 	var pattern = new RegExp('^' +query+ '.*');
        	 	var characters = db.get('characters');
 
-            characters.find({name: pattern}, {}, function(err, matchedDocs){
+            characters.find({name: {$regex: pattern, $options: 'i'}}, {}, function(err, matchedDocs){
             	if(err)
             		return cb(err);
                 cb(null, matchedDocs)

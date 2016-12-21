@@ -69,7 +69,7 @@ app.post('/characters', characters.add);
 app.put('/characters/:id', characters.update);
 app.delete('/characters/:id', characters.delete);
 
-app.listen(3000, function(){
+app.listen(80, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });
 

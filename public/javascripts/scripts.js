@@ -5,7 +5,7 @@ $(function () {
     'use strict';
     var subscribedEvents = [];
 
-    var socket = io.connect('http://localhost:3000/');
+    var socket = io.connect('http://ec2-54-172-9-212.compute-1.amazonaws.com/');
     socket.on('welcome', function (data) {
       $('#newsItems').append('<li style="color:#000000;"><i>#Welcome: </i>'+data.message+'</li>');
     });

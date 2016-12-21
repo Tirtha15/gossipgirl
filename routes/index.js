@@ -20,7 +20,7 @@ module.exports = {
        var query = req.query.query|| 'c';
        async.auto({
        	 characters: function(cb){
-       	 	var pattern = new RegExp('^' +query+ '.*');
+       	 	var pattern = new RegExp('^' +query+ '.*/i');
        	 	var characters = db.get('characters');
 
             characters.find({name: pattern}, {}, function(err, matchedDocs){

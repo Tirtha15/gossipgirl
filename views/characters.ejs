@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <dic class="col-md-12">
+		<% characters.forEach(function(character){%>
+			<div class="characters">
+		       name: <%=character.name%>:
+		       actor: <%=character.actor%>:
+		       location: <%=character.location%>
+		    </div>
+		<%})%>
+	</div>
+  </div>
+</div>

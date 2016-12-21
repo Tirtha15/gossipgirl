@@ -12,7 +12,13 @@ var unchangeableFields = ['_id', 'name'];
 
 module.exports = {
 	index: function (req, res){
-		return res.render('index', { title: 'Gossip Girl News Feed' });
+		var socketUrl = ''
+		if(process.env.NODE_ENV === 'production')
+			socketUrl = 'http://ec2-54-172-9-212.compute-1.amazonaws.com/';
+		else
+			socketUrl = 'http://localhost:3000';
+
+		return res.render('index', { title: 'Gossip Girl News Feed', socketUrl:  socketUrl});
 	},
 
 	suggestions: function(req, res) {

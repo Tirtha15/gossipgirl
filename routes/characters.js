@@ -179,7 +179,7 @@ module.exports = {
         	}],
         	emitEvent:['delete', function(results, cb){
                 var charDetails = stringifyAttributes(results.find);
-        	    req.io.sockets.emit('NewInfo', { event:'All', message: messages.deletedCharacter+charDetails });
+        	    req.io.sockets.emit('NewInfo', { event:'NewInfo', message: messages.deletedCharacter+charDetails });
         	    cb();
         	}],
         }, function(err, results){

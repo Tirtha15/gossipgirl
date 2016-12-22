@@ -14,7 +14,7 @@ module.exports = {
 	index: function (req, res){
 		var socketUrl = ''
 		if(process.env.NODE_ENV === 'production')
-			socketUrl = 'http://ec2-54-172-9-212.compute-1.amazonaws.com/';
+			socketUrl = 'http://ec2-174-129-142-94.compute-1.amazonaws.com/';
 		else
 			socketUrl = 'http://localhost:3000';
 
